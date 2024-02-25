@@ -4,7 +4,7 @@ header.encabezado{
     display:flex;
     gap:10px;
     border-radius: 20px;
-    
+    height: 200px;
     @include tamano($cubrir);
     grid-area: header;
     
@@ -16,7 +16,7 @@ header.encabezado{
     img{
         margin-left: 120px;
         border-radius: 100%;
-        @include tamano(150px);
+        @include tamano(150px,150px);
         
         
     }

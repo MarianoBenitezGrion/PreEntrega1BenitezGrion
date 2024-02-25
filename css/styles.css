@@ -42,6 +42,7 @@ header.encabezado {
   display: flex;
   gap: 10px;
   border-radius: 20px;
+  height: 200px;
   width: 100%;
   grid-area: header;
 }
@@ -53,6 +54,7 @@ header.encabezado nav {
 header.encabezado img {
   margin-left: 120px;
   border-radius: 100%;
+  height: 150px;
   width: 150px;
 }
 
@@ -92,7 +94,7 @@ main.diseño {
   margin: 10px 15px;
 }
 main.diseño img {
-  height: 400px;
+  height: 600px;
   width: auto;
 }
 main.diseño article div {
@@ -205,7 +207,7 @@ div.centrado {
 }
 
 /*media queries*/
-@media (min-width: 300px) and (max-width: 1024px) {
+@media (min-width: 200px) and (max-width: 1024px) {
   /* … */
   p {
     font-size: 30px;
