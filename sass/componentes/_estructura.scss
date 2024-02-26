@@ -22,11 +22,13 @@ div.pantalla-cubierta{
 section.espaciado{
     border:$color-encabezado;
     border-radius: 20px;
-    margin: 5%;
+    margin-top: 15%;
+    margin-left: 5%;
+    
     font-size: $tamano-letra-acdn;
     font-family: $tipografia;
     
-    @include tamano(70%);
+    @include tamano(70%,50%);
 
 }
 
@@ -62,7 +64,10 @@ aside.contacto{
 section.local{
     grid-area: section;
     background-size: cover;
-    
+    img{
+        height: 100%;
+        width: auto;
+    }
     
 
     
@@ -80,13 +85,14 @@ section.comentario{
     }
 }
 div.contacto{
+
     display:grid;
     @include tamano(null,100vh);
     
     display:grid;
     justify-content:center;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 4fr 2fr 1fr;
+    grid-template-rows: 1fr 3fr 4fr 1fr;
     grid-template-areas: 
     "header header"
     "section aside"
@@ -96,10 +102,11 @@ div.contacto{
 }
 section.mapa{
     grid-area: mapa;
+
     div{
         border-radius: 10px;
         
-        @include tamano(100%);
+        @include tamano(100%,100%);
         iframe{
             
             @include tamano(100%,100%)

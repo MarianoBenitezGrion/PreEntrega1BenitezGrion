@@ -1,18 +1,22 @@
 @import"../base/variables";
 main.diseño{
+    width:100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap:10px;
+    gap:5%;
     align-content: center;
     justify-content: center;
-    margin: 10px 15px;
-    img{
-    
-    @include tamano(auto,600px);
-    }
-
+    margin-right: 100px;
+    margin-bottom: 200px;
     article{
+        
+        
+        img{
+            
+            width: auto;
+            height: 350px;
+            }
         div{
             text-align: center;
         }

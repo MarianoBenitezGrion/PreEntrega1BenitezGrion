@@ -85,17 +85,19 @@ header div.collapse {
 
 /*#D35400*/
 main.diseño {
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 5%;
   align-content: center;
   justify-content: center;
-  margin: 10px 15px;
+  margin-right: 100px;
+  margin-bottom: 200px;
 }
-main.diseño img {
-  height: 600px;
+main.diseño article img {
   width: auto;
+  height: 350px;
 }
 main.diseño article div {
   text-align: center;
@@ -135,9 +137,11 @@ div.pantalla-cubierta {
 section.espaciado {
   border: #010101;
   border-radius: 20px;
-  margin: 5%;
+  margin-top: 15%;
+  margin-left: 5%;
   font-size: x-large;
   font-family: "Times New Roman", Times, serif;
+  height: 50%;
   width: 70%;
 }
 
@@ -167,6 +171,10 @@ section.local {
   grid-area: section;
   background-size: cover;
 }
+section.local img {
+  height: 100%;
+  width: auto;
+}
 
 section.comentario {
   margin-left: 200px;
@@ -185,7 +193,7 @@ div.contacto {
   display: grid;
   justify-content: center;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 4fr 2fr 1fr;
+  grid-template-rows: 1fr 3fr 4fr 1fr;
   grid-template-areas: "header header" "section aside" "mapa mapa" "footer footer";
 }
 
@@ -194,6 +202,7 @@ section.mapa {
 }
 section.mapa div {
   border-radius: 10px;
+  height: 100%;
   width: 100%;
 }
 section.mapa div iframe {
@@ -235,7 +244,7 @@ div.centrado {
   div.inicio {
     height: 100vh;
     grid-template-columns: 100%;
-    grid-template-rows: 1fr 2fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr 1fr;
     grid-template-areas: "header header" "section section" "aside aside" "footer footer";
   }
   div.inicio section.local img {
@@ -260,7 +269,7 @@ div.centrado {
   div.contacto {
     height: 100vh;
     grid-template-columns: 100%;
-    grid-template-rows: 1fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 4fr 1fr;
     grid-template-areas: "header header" "section section" "aside aside" "mapa mapa" "footer footer";
     justify-content: center;
   }
@@ -271,12 +280,7 @@ div.centrado {
     justify-content: center;
   }
   div.pantalla-cubierta main.diseño {
-    justify-content: center;
     flex-direction: column;
-  }
-  div.pantalla-cubierta main.diseño article img {
-    width: 400px;
-    height: auto;
   }
 }
 @media screen and (min-width: 1025) {
@@ -301,7 +305,6 @@ body {
 a {
   color: #174285;
 }
-
 a input:hover {
   border-color: white;
   color: white;
@@ -329,7 +332,7 @@ article div h2 {
 
 .whatsapp-button {
   position: fixed;
-  bottom: 40px;
+  bottom: 50px;
   right: 20px;
   width: 10px;
   height: 60px;

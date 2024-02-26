@@ -12,11 +12,9 @@ body{
     
     @include tamano(null,100vh);
 }
+
 a{
     color:$color-letra-borde;
-}
-a{
-    
     input:hover{
         border-color: white;
         color:white;
@@ -53,7 +51,7 @@ article{
 }
 .whatsapp-button {
     position: fixed;
-    bottom: 40px;
+    bottom: 50px;
     right: 20px;
     width: 10px;
     height: 60px;
