@@ -6,12 +6,32 @@ div.inicio{
     display:grid;
     justify-content:center;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 2fr 3fr 1fr;
     grid-template-areas: 
     "header header"
+    "promo promo"
     "section aside"
     "footer footer"
     ;
+    section.promo{
+        margin:4px;
+        img{
+            border:3px solid $color-letra-borde;
+            border-radius: 20px;
+        }
+        
+    }
+    aside{
+        width: 100%;
+        
+        ul{
+            margin-left: 20px;
+            li{
+                font-size: 150%;
+                color: #9E4B58;
+            }
+        }
+    }
 }
 div.pantalla-cubierta{
     
@@ -22,14 +42,18 @@ div.pantalla-cubierta{
 section.espaciado{
     border:$color-encabezado;
     border-radius: 20px;
-    margin-top: 15%;
+    
     margin-left: 5%;
     
     font-size: $tamano-letra-acdn;
     font-family: $tipografia;
     
     @include tamano(70%,50%);
-
+    div{
+        img.imagen-local{
+            width:100%;
+        }
+    }
 }
 
 
@@ -37,7 +61,7 @@ aside.text{
     grid-area: aside;
     justify-content: center;
     align-content: center;
-    
+    margin-right: 100px;
 
 div{
     
@@ -81,7 +105,7 @@ section.comentario{
     }
     input, textarea{
         margin:5px;
-        @include tamano(350px);
+        @include tamano(500px);
     }
 }
 div.contacto{
@@ -92,30 +116,34 @@ div.contacto{
     display:grid;
     justify-content:center;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 3fr 4fr 1fr;
+    grid-template-rows: 1fr 2fr 4fr 1fr;
     grid-template-areas: 
     "header header"
     "section aside"
     "mapa mapa"
     "footer footer"
     ;
+    
 }
 section.mapa{
     grid-area: mapa;
-
-    div{
-        border-radius: 10px;
-        
-        @include tamano(100%,100%);
+    
         iframe{
             
-            @include tamano(100%,100%)
+            @include tamano(100%, 300px);
         }
+    
+}
+section.promo{
+    grid-area: promo;
+    img{
+        width: 100%;
     }
 }
 div.centrado{
     justify-content: center;
     text-align: center;
+    
 }
 
 

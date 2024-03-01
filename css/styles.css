@@ -8,14 +8,14 @@ footer.pie_pagina {
 footer.pie_pagina div.pie {
   width: 100%;
   display: flex;
-  background-color: #292C3E;
+  font-size: 150%;
+  background-color: #527CBE;
   justify-content: end;
   color: #F4F8F7;
   padding: 10px;
 }
 footer.pie_pagina div.pie div.navegacion-pie {
-  margin-right: 20%;
-  justify-self: end;
+  margin-right: 55%;
 }
 footer.pie_pagina div.pie div.navegacion-pie ul li a {
   color: #F4F8F7;
@@ -42,6 +42,7 @@ header.encabezado {
   display: flex;
   gap: 10px;
   border-radius: 20px;
+  border-width: 100px;
   height: 200px;
   width: 100%;
   grid-area: header;
@@ -89,18 +90,21 @@ main.diseño {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 5%;
+  gap: 10px;
   align-content: center;
   justify-content: center;
-  margin-right: 100px;
+  margin-top: 100px;
   margin-bottom: 200px;
 }
 main.diseño article img {
   width: auto;
-  height: 350px;
+  height: 400px;
 }
 main.diseño article div {
   text-align: center;
+}
+main.diseño article div h2 {
+  font-size: 150%;
 }
 
 /*#D35400*/
@@ -126,8 +130,25 @@ div.inicio {
   display: grid;
   justify-content: center;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 4fr 1fr;
-  grid-template-areas: "header header" "section aside" "footer footer";
+  grid-template-rows: 1fr 2fr 3fr 1fr;
+  grid-template-areas: "header header" "promo promo" "section aside" "footer footer";
+}
+div.inicio section.promo {
+  margin: 4px;
+}
+div.inicio section.promo img {
+  border: 3px solid #174285;
+  border-radius: 20px;
+}
+div.inicio aside {
+  width: 100%;
+}
+div.inicio aside ul {
+  margin-left: 20px;
+}
+div.inicio aside ul li {
+  font-size: 150%;
+  color: #9E4B58;
 }
 
 div.pantalla-cubierta {
@@ -137,18 +158,21 @@ div.pantalla-cubierta {
 section.espaciado {
   border: #010101;
   border-radius: 20px;
-  margin-top: 15%;
   margin-left: 5%;
   font-size: x-large;
   font-family: "Times New Roman", Times, serif;
   height: 50%;
   width: 70%;
 }
+section.espaciado div img.imagen-local {
+  width: 100%;
+}
 
 aside.text {
   grid-area: aside;
   justify-content: center;
   align-content: center;
+  margin-right: 100px;
 }
 aside.text div {
   grid-area: aside;
@@ -184,7 +208,7 @@ section.comentario h2 {
 }
 section.comentario input, section.comentario textarea {
   margin: 5px;
-  width: 350px;
+  width: 500px;
 }
 
 div.contacto {
@@ -193,20 +217,22 @@ div.contacto {
   display: grid;
   justify-content: center;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 3fr 4fr 1fr;
+  grid-template-rows: 1fr 2fr 4fr 1fr;
   grid-template-areas: "header header" "section aside" "mapa mapa" "footer footer";
 }
 
 section.mapa {
   grid-area: mapa;
 }
-section.mapa div {
-  border-radius: 10px;
-  height: 100%;
+section.mapa iframe {
+  height: 300px;
   width: 100%;
 }
-section.mapa div iframe {
-  height: 100%;
+
+section.promo {
+  grid-area: promo;
+}
+section.promo img {
   width: 100%;
 }
 
@@ -216,7 +242,7 @@ div.centrado {
 }
 
 /*media queries*/
-@media (min-width: 200px) and (max-width: 1024px) {
+@media (min-width: 375px) and (max-width: 1024px) {
   /* … */
   p {
     font-size: 30px;
@@ -245,7 +271,7 @@ div.centrado {
     height: 100vh;
     grid-template-columns: 100%;
     grid-template-rows: 1fr 3fr 1fr 1fr;
-    grid-template-areas: "header header" "section section" "aside aside" "footer footer";
+    grid-template-areas: "header header" "promo promo" "section section" "aside aside" "footer footer";
   }
   div.inicio section.local img {
     width: 100%;
@@ -269,7 +295,7 @@ div.centrado {
   div.contacto {
     height: 100vh;
     grid-template-columns: 100%;
-    grid-template-rows: 1fr 2fr 2fr 4fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr 1fr;
     grid-template-areas: "header header" "section section" "aside aside" "mapa mapa" "footer footer";
     justify-content: center;
   }
@@ -279,8 +305,18 @@ div.centrado {
   div.contacto aside {
     justify-content: center;
   }
+  div.contacto section.mapa iframe {
+    height: 100%;
+  }
   div.pantalla-cubierta main.diseño {
     flex-direction: column;
+    text-align: center;
+  }
+  div.pantalla-cubierta main.diseño img {
+    height: 300px;
+  }
+  div.pantalla-cubierta main.diseño div {
+    font-size: 90%;
   }
 }
 @media screen and (min-width: 1025) {
@@ -300,6 +336,11 @@ div.centrado {
 body {
   background-color: #F4F8F7;
   height: 100vh;
+}
+
+h1 {
+  font-size: 40px;
+  margin-top: 20px;
 }
 
 a {
@@ -327,14 +368,14 @@ main {
 }
 
 article div h2 {
-  font-size: 20px;
+  margin-top: 5px;
 }
 
 .whatsapp-button {
   position: fixed;
   bottom: 50px;
   right: 20px;
-  width: 10px;
+  width: 60px;
   height: 60px;
   background-color: #25d366;
   border-radius: 50%;

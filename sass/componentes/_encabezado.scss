@@ -4,11 +4,15 @@ header.encabezado{
     display:flex;
     gap:10px;
     border-radius: 20px;
+    border-width: 100px;
+    
+    
     height: 200px;
     @include tamano($cubrir);
     grid-area: header;
     
     nav{
+        
         justify-content: end;
         border-block-color: white;
         background-color: $color-encabezado;

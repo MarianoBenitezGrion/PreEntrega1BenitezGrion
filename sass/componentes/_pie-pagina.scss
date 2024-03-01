@@ -8,14 +8,14 @@ footer.pie_pagina{
     div.pie{
         width: 100%;
         display: flex;
-        
+        font-size: 150%;
         background-color: $color-pie-pagina;
         justify-content: end;
         color:$color-body;
         padding: 10px;
     div.navegacion-pie{
-        margin-right: 20%;
-        justify-self: end;
+        margin-right: 55%;
+        
         ul{
             li{
                 a{
@@ -29,6 +29,7 @@ footer.pie_pagina{
         align-content: end;
             ul{
                 display: flex;
+                
                 gap:8px;
                 list-style: none;
                 justify-content: end;
@@ -37,6 +38,7 @@ footer.pie_pagina{
                     button{
                         @include tamano(40px,40px);
                     }
+                    
                 }
             }
         }
