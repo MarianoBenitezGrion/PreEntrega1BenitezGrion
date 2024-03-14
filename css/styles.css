@@ -121,10 +121,18 @@ nav.barra_de_navegacion input {
   border-radius: 20px;
   border-color: #174285;
   color: #174285;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0);
 }
 
 /*#D35400*/
+button {
+  width: 150px;
+  border-radius: 20px;
+  border-color: #174285;
+  color: #174285;
+  background: rgba(0, 0, 0, 0);
+}
+
 div.inicio {
   height: 100vh;
   display: grid;
@@ -143,10 +151,10 @@ div.inicio section.promo img {
 div.inicio aside {
   width: 100%;
 }
-div.inicio aside ul {
+div.inicio aside ul, div.inicio aside ol {
   margin-left: 20px;
 }
-div.inicio aside ul li {
+div.inicio aside ul li, div.inicio aside ol li {
   font-size: 150%;
   color: #9E4B58;
 }

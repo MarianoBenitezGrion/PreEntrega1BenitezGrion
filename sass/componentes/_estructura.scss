@@ -1,5 +1,14 @@
 @import "../base/variables";
 @import "../base/mixin";
+
+    button{
+    @include tamano(150px);
+    border-radius: 20px;
+    border-color: $color-letra-borde;
+    color:$color-letra-borde;
+    background:$transparente;
+}
+
 div.inicio{
     @include tamano(null,100vh);
     
@@ -24,7 +33,7 @@ div.inicio{
     aside{
         width: 100%;
         
-        ul{
+        ul, ol{
             margin-left: 20px;
             li{
                 font-size: 150%;
